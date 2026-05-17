@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Banner from "@/components/home/Banner";
+import Banner from "@/components/Home/Banner";
 import NewsMarquee from "@/components/Home/Marquee";
 import FeaturedBooks from "@/components/Home/FeaturedBooks";
 import Stats from "@/components/Home/Stats";
