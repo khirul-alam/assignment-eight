@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import booksData from "../../../public/books.json";
-import SearchBar from "@/components/allbooks/SearchBar";
-import Sidebar from "@/components/allbooks/Sidebar";
-import BookCard from "@/components/allbooks/BookCard";
+import SearchBar from "@/components/AllBooks/SearchBar";
+import Sidebar from "@/components/AllBooks/Sidebar";
+import BookCard from "@/components/AllBooks/BookCard";
 
 const AllBooksPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
