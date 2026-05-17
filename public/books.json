@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent River",
+    "author": "Arif Rahman",
+    "description": "A touching story about loss, hope, and rediscovery along a rural riverside village.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://picsum.photos/seed/river/400/600"
+  },
+  {
+    "id": 2,
+    "title": "Journey Beyond Stars",
+    "author": "Mina Chowdhury",
+    "description": "A science fiction tale exploring interstellar travel and human survival in deep space.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://picsum.photos/seed/stars/400/600"
+  },
+  {
+    "id": 3,
+    "title": "Mastering JavaScript",
+    "author": "John Doe",
+    "description": "A complete guide to modern JavaScript concepts, ES6+, and real-world applications.",
+    "category": "Tech",
+    "available_quantity": 12,
+    "image_url": "https://picsum.photos/seed/javascript/400/600"
+  },
+  {
+    "id": 4,
+    "title": "Whispers of the Heart",
+    "author": "Shabnam Akter",
+    "description": "A romantic story that explores emotional struggles and human relationships.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://picsum.photos/seed/heart/400/600"
+  },
+  {
+    "id": 5,
+    "title": "Data Science Essentials",
+    "author": "Emily Watson",
+    "description": "An introduction to data science, covering statistics, Python, and machine learning basics.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://picsum.photos/seed/data/400/600"
+  },
+  {
+    "id": 6,
+    "title": "React in Depth",
+    "author": "Alex Martin",
+    "description": "Advanced React concepts including hooks, context API, and performance optimization.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://picsum.photos/seed/react/400/600"
+  },
+  {
+    "id": 7,
+    "title": "The Forgotten Kingdom",
+    "author": "Kamal Hossain",
+    "description": "An epic historical story of a lost kingdom and its hidden secrets.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://picsum.photos/seed/kingdom/400/600"
+  },
+  {
+    "id": 8,
+    "title": "Quantum Physics Simplified",
+    "author": "Dr. Sarah Lee",
+    "description": "A beginner-friendly explanation of quantum physics principles and theories.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://picsum.photos/seed/physics/400/600"
+  },
+  {
+    "id": 9,
+    "title": "Node.js Backend Guide",
+    "author": "Rahim Uddin",
+    "description": "Learn backend development using Node.js, Express, and MongoDB.",
+    "category": "Tech",
+    "available_quantity": 11,
+    "image_url": "https://picsum.photos/seed/node/400/600"
+  },
+  {
+    "id": 10,
+    "title": "Echoes of Time",
+    "author": "Laila Hasan",
+    "description": "A poetic story that blends past memories with present emotions.",
+    "category": "Story",
+    "available_quantity": 3,
+    "image_url": "https://picsum.photos/seed/time/400/600"
+  },
+  {
+    "id": 11,
+    "title": "Artificial Intelligence Basics",
+    "author": "David Kim",
+    "description": "An introduction to AI concepts, machine learning, and neural networks.",
+    "category": "Science",
+    "available_quantity": 14,
+    "image_url": "https://picsum.photos/seed/ai/400/600"
+  },
+  {
+    "id": 12,
+    "title": "HTML & CSS Mastery",
+    "author": "Nusrat Jahan",
+    "description": "Learn to build responsive and modern websites using HTML and CSS.",
+    "category": "Tech",
+    "available_quantity": 15,
+    "image_url": "https://picsum.photos/seed/html/400/600"
+  }
+]
