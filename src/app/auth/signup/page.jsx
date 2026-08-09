@@ -4,10 +4,17 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Check, Eye, EyeSlash } from '@gravity-ui/icons'
 import toast from 'react-hot-toast'
-import { FcGoogle } from "react-icons/fc";
+import { FcGoogle } from 'react-icons/fc'
 
 import {
-  Button, Description, FieldError, Form, Input, InputGroup, Label, TextField
+  Button,
+  Description,
+  FieldError,
+  Form,
+  Input,
+  InputGroup,
+  Label,
+  TextField
 } from '@heroui/react'
 
 import { authClient } from '@/lib/auth-client'
@@ -61,7 +68,9 @@ const SignUpPage = () => {
 
     if (data) {
       toast.success('🎉 Welcome back to MangoLibrary!', toastSuccessStyle)
-      router.push('/')
+      setTimeout(() => {
+        window.location.href = '/'
+      }, 1000)
     }
   }
 
@@ -81,18 +90,14 @@ const SignUpPage = () => {
 
   return (
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 via-base-200 to-secondary/20 px-4'>
-
       <div className='w-full max-w-md bg-base-100/90 backdrop-blur-lg shadow-2xl rounded-3xl p-8 border border-base-300'>
-
         {/* Header */}
         <div className='text-center mb-8'>
           <h2 className='text-4xl font-extrabold text-primary'>
             Create Account
           </h2>
 
-          <p className='text-base-content/70 mt-2'>
-            Join MangoLibrary today
-          </p>
+          <p className='text-base-content/70 mt-2'>Join MangoLibrary today</p>
         </div>
 
         {/* Google Login */}
@@ -112,7 +117,6 @@ const SignUpPage = () => {
 
         {/* Form */}
         <Form className='flex flex-col gap-5' onSubmit={onSubmit}>
-
           {/* Name */}
           <TextField
             isRequired
@@ -127,11 +131,7 @@ const SignUpPage = () => {
           >
             <Label>Full Name</Label>
 
-            <Input
-              name='name'
-              placeholder='John Doe'
-              className='w-full'
-            />
+            <Input name='name' placeholder='John Doe' className='w-full' />
 
             <FieldError />
           </TextField>
@@ -142,9 +142,7 @@ const SignUpPage = () => {
             name='email'
             type='email'
             validate={value => {
-              if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
-              ) {
+              if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                 return 'Please enter a valid email address'
               }
 
@@ -265,11 +263,7 @@ const SignUpPage = () => {
               Create Account
             </Button>
 
-            <Button
-              type='reset'
-              variant='secondary'
-              className='w-full'
-            >
+            <Button type='reset' variant='secondary' className='w-full'>
               Reset
             </Button>
           </div>
