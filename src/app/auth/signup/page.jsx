@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Check, Eye, EyeSlash } from '@gravity-ui/icons'
 import toast from 'react-hot-toast'
 import { FcGoogle } from "react-icons/fc";
@@ -14,6 +15,7 @@ import Link from 'next/link'
 
 const SignUpPage = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const router = useRouter()
 
   const toastErrorStyle = {
     duration: 4000,
@@ -59,6 +61,7 @@ const SignUpPage = () => {
 
     if (data) {
       toast.success('🎉 Welcome back to MangoLibrary!', toastSuccessStyle)
+      router.push('/')
     }
   }
 
