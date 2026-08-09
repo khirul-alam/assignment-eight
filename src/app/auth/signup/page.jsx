@@ -6,13 +6,35 @@ import toast from 'react-hot-toast'
 import { FcGoogle } from "react-icons/fc";
 
 import {
-  Button,Description,FieldError,Form,Input,InputGroup,Label,TextField} from '@heroui/react'
+  Button, Description, FieldError, Form, Input, InputGroup, Label, TextField
+} from '@heroui/react'
 
 import { authClient } from '@/lib/auth-client'
 import Link from 'next/link'
 
 const SignUpPage = () => {
   const [isVisible, setIsVisible] = useState(false)
+
+  const toastErrorStyle = {
+    duration: 4000,
+    style: {
+      borderRadius: '12px',
+      background: '#ef4444',
+      color: '#fff',
+      padding: '16px'
+    }
+  }
+
+  const toastSuccessStyle = {
+    duration: 4000,
+    icon: '📚',
+    style: {
+      borderRadius: '12px',
+      background: '#22c55e',
+      color: '#fff',
+      padding: '16px'
+    }
+  }
 
   // Email Signup
   const onSubmit = async e => {
@@ -25,34 +47,18 @@ const SignUpPage = () => {
       name: userData.name,
       email: userData.email,
       password: userData.password,
+      image: userData.photo,
       callbackURL: '/'
     })
 
     console.log('sign up response:', { data, error })
 
     if (error) {
-      toast.error(error.message, {
-        duration: 4000,
-        style: {
-          borderRadius: '12px',
-          background: '#ef4444',
-          color: '#fff',
-          padding: '16px'
-        }
-      })
+      toast.error(error.message, toastErrorStyle)
     }
 
     if (data) {
-      toast.success('🎉 Welcome back to MangoLibrary!', {
-        duration: 4000,
-        icon: '📚',
-        style: {
-          borderRadius: '12px',
-          background: '#22c55e',
-          color: '#fff',
-          padding: '16px'
-        }
-      })
+      toast.success('🎉 Welcome back to MangoLibrary!', toastSuccessStyle)
     }
   }
 
@@ -66,15 +72,15 @@ const SignUpPage = () => {
     console.log({ data, error })
 
     if (error) {
-      alert(error.message)
+      toast.error(error.message, toastErrorStyle)
     }
   }
 
   return (
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 via-base-200 to-secondary/20 px-4'>
-      
+
       <div className='w-full max-w-md bg-base-100/90 backdrop-blur-lg shadow-2xl rounded-3xl p-8 border border-base-300'>
-        
+
         {/* Header */}
         <div className='text-center mb-8'>
           <h2 className='text-4xl font-extrabold text-primary'>
@@ -103,7 +109,7 @@ const SignUpPage = () => {
 
         {/* Form */}
         <Form className='flex flex-col gap-5' onSubmit={onSubmit}>
-          
+
           {/* Name */}
           <TextField
             isRequired
@@ -152,23 +158,29 @@ const SignUpPage = () => {
 
             <FieldError />
           </TextField>
+
+          {/* Photo URL */}
           <TextField
-                                    
+            isRequired
+            name='photo'
+            validate={value => {
+              try {
+                new URL(value)
+                return null
+              } catch {
+                return 'Please enter a valid URL'
+              }
+            }}
           >
             <Label>Photo URL</Label>
 
             <Input
-              type='text'
               name='photo'
               placeholder='https://example.com/photo.jpg'
-              className='input input-bordered focus:border-blue-900'
-              required
+              className='w-full'
             />
 
             <FieldError />
-          
-           
-            
           </TextField>
 
           {/* Password */}
